@@ -16,13 +16,11 @@
                </thead>
                <tbody>
                    <tr *ngFor="let item of products">
-                       <td>{{item+ 1}}</td>
+                       <td>{{item.url}}</td>
                        <td>{{item.title}}</td>
                        <td><img style="width:250px" src="{{item.image}}" alt=""></td>
-                       <td>{{item.description}}</td>
-                       <td>{{item.price}}</td>
-                       <td>{{item.quantity}}</td>
-                       <td>{{item.total}}</td>
+                       <td>{{item.des}}</td>
+                     
                        <td>
                            <button class="btn btn-danger">Delete</button>
                        </td>
