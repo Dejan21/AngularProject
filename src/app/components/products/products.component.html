@@ -4,8 +4,9 @@
             <div class="card ">
                 <img src="{{item.thumbnailUrl}}" alt="">
                 <h5>{{item.title}}</h5>
-                <p>{{item.url}}</p>
-               
+                <p>{{item.id}}</p>
+                <button class=" btn btn-primary" (click)="goToPage('edit')" [routerLink]="['/edit']">Edit card
+                </button>
              </div>
         </ng-container>
 

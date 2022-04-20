@@ -1,0 +1,22 @@
+/* .card{
+    padding: 20px;
+    margin: 50px;
+    flex-direction: row !important;
+    width: 550px;
+    height: 300px;
+  } */
+  .card{
+    margin:10px;
+    background-clip: border-box;
+    width: 210px;
+    word-wrap: break-word;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: .25rem;
+    background: #fff;
+}
+img{
+  width: 211px;
+}
+.row{
+  display: flex;
+}

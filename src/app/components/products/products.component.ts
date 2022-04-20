@@ -24,7 +24,9 @@ export class ProductsComponent implements OnInit {
     // this.products = this.apiService.products
    
     }
-   
+    goToPage(edit:string): void {
+    }
+  
    
     
   
