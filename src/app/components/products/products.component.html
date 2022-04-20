@@ -1,1 +1,13 @@
-<p>products works!</p>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card ">
+                <img src="{{item.thumbnailUrl}}" alt="">
+                <h5>{{item.title}}</h5>
+                <p>{{item.url}}</p>
+               
+             </div>
+        </ng-container>
+
+    </div>
+</div>
