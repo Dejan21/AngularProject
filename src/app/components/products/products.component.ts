@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/service/api.service';
 import { HttpClient } from '@angular/common/http';
+import { EditService } from 'src/app/service/edit.service';
 
 @Component({
   selector: 'app-products',
@@ -14,7 +15,7 @@ export class ProductsComponent implements OnInit {
 
   
 
-  constructor(private http:HttpClient ,  private api: ApiService) { }
+  constructor(private http:HttpClient ,  private api: ApiService, private editService: EditService) { }
 
   ngOnInit(): void {
     this.api.getProduct()
@@ -27,6 +28,9 @@ export class ProductsComponent implements OnInit {
     goToPage(edit:string): void {
     }
   
+    editCard(item:any){
+      this.editService.editCard(item);
+    }
    
     
   
