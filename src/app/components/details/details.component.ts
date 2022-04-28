@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DetailService } from 'src/app/service/detail.service';
+
 
 @Component({
   selector: 'app-details',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  public products :any = [];
+  public grandTotal !: number;
 
+  constructor(private detailService: DetailService) { }
+
+  
   ngOnInit(): void {
+    this.detailService.getProducts()
+    .subscribe((res:any)=>{
+       this.products = res;
+       this.grandTotal = this.detailService.getTotalDetails();
+    })
   }
+ 
+  
 
 }
